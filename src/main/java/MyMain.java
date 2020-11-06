@@ -4,20 +4,34 @@ public class MyMain {
 
     // Counts the number of odd numbers in list
     public static int countOdd(ArrayList<Integer> list) { 
-        // REPLACE WITH YOUR CODE
-        return 0;
+        int oddcount = 0;
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) % 2 != 0) {
+                oddcount += 1;
+            }
+        }
+        return oddcount;
     }
 
     // Returns true if there is an int that appears in both lists
     public static boolean checkDuplicates(ArrayList<Integer> list1, ArrayList<Integer> list2) { 
-        // REPLACE WITH YOUR CODE
+        for (int i = 0; i < list1.size(); i++) {
+            for (int j = 0; j < list2.size(); j++) {
+                if (list1.get(i) == list2.get(j)){
+                    return true;
+                }
+            }
+        }
         return false;
     }
 
     // Takes an int[] as input and returns the equivalent ArrayList<Integer>
     public static ArrayList<Integer> convertToArrayList(int[] arr) { 
-        // REPLACE WITH YOUR CODE
-        return null;
+        ArrayList<Integer> fromArray = new ArrayList<Integer>();
+        for (int i = 0; i < arr.length; i++){
+            fromArray.add(arr[i]);
+        }
+        return fromArray;
     }
 
 
